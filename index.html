@@ -8,32 +8,33 @@
   <title>For Khushi ❤️</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <div class="background-glow"></div>
   <div id="hearts-container"></div>
+  <div id="confetti-container"></div>
 
   <!-- Decorative doodles -->
   <svg class="doodle doodle-one" viewBox="0 0 100 100">
-    <path d="M50 8 C20 30 20 55 50 85 C80 55 80 30 50 8Z"
-      fill="none" stroke="#c52e49" stroke-width="2"/>
+    <path d="M50 8 C20 30 20 55 50 85 C80 55 80 30 50 8Z"/>
   </svg>
 
   <svg class="doodle doodle-two" viewBox="0 0 100 100">
-    <path d="M50 5 L58 40 L95 50 L58 60 L50 95 L42 60 L5 50 L42 40Z"
-      fill="none" stroke="#d65a6c" stroke-width="2"/>
+    <path d="M50 5 L58 40 L95 50 L58 60 L50 95 L42 60 L5 50 L42 40Z"/>
   </svg>
 
   <svg class="doodle doodle-three" viewBox="0 0 100 100">
-    <path d="M10 50 Q50 5 90 50 Q50 95 10 50Z"
-      fill="none" stroke="#a72c42" stroke-width="2"/>
+    <path d="M10 50 Q50 5 90 50 Q50 95 10 50Z"/>
   </svg>
 
   <main class="container">
 
-    <!-- Opening -->
-    <section class="hero">
+    <!-- PAGE 1: HOME -->
+    <section class="page hero active" id="home">
+
       <div class="tiny-heart">♥</div>
+
       <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
 
       <h1>Hey, <span>Khushi</span>...</h1>
@@ -43,43 +44,52 @@
       </p>
 
       <button class="main-btn" id="startBtn">
-        Open your little surprise
-        <span>♡</span>
+        Open your little surprise <span>♡</span>
       </button>
 
-      <p class="small-note">Made with a little courage and a lot of feelings.</p>
+      <p class="small-note">
+        Made with a little courage and a lot of feelings.
+      </p>
+
     </section>
 
-    <!-- Story -->
-    <section class="story hidden" id="story">
 
-      <div class="section-heading">
-        <p class="eyebrow">EVERY STORY HAS A BEGINNING</p>
-        <h2>It started with <span>two dates.</span></h2>
-      </div>
+    <!-- PAGE 2: THEIR STORY -->
+    <section class="page story" id="story">
+
+      <p class="eyebrow">EVERY STORY HAS A BEGINNING</p>
+
+      <h2>It started with <span>two dates.</span></h2>
 
       <div class="timeline">
 
         <div class="timeline-item">
           <div class="timeline-heart">♥</div>
+
           <div class="timeline-card">
             <span class="date">07 JUNE 2026</span>
+
             <h3>The First Glimpse</h3>
+
             <p>
-              The day two people saw each other for the first time.
-              A simple moment that became a beautiful memory.
+              The day two people saw each other
+              for the very first time.
+              A simple moment worth remembering.
             </p>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-heart">♥</div>
+
           <div class="timeline-card">
             <span class="date">08 JUNE 2026</span>
+
             <h3>The First Conversation</h3>
+
             <p>
-              The first time they talked.
-              And perhaps, the beginning of something special.
+              The first time they actually talked.
+              Perhaps the beginning of something special.
             </p>
           </div>
         </div>
@@ -88,18 +98,25 @@
 
       <div class="transition-text">
         <p>And somewhere along the way...</p>
-        <h2>Someone started feeling something special. ❤️</h2>
+
+        <h2>
+          Someone started feeling something special. ❤️
+        </h2>
       </div>
 
       <button class="main-btn" id="confessBtn">
-        There's something I want to say
-        <span>♡</span>
+        There's something I want to say <span>♡</span>
+      </button>
+
+      <button class="back-btn" data-back="home">
+        ← Back
       </button>
 
     </section>
 
-    <!-- Confession -->
-    <section class="confession hidden" id="confession">
+
+    <!-- PAGE 3: CONFESSION -->
+    <section class="page confession" id="confession">
 
       <div class="big-heart">♥</div>
 
@@ -108,6 +125,7 @@
       <h2>Khushi,</h2>
 
       <div class="letter">
+
         <p>I've been wanting to tell you something.</p>
 
         <p>
@@ -125,31 +143,65 @@
         <p class="signature">
           — Dikshant ❤️
         </p>
+
       </div>
 
-      <div class="proposal">
-        <p class="eyebrow">SO, HERE'S MY QUESTION</p>
+      <button class="main-btn" id="proposalBtn">
+        One more thing... <span>♡</span>
+      </button>
 
-        <h1>Will you be my <span>girlfriend?</span></h1>
-
-        <div class="buttons">
-          <button id="yesBtn" class="yes-btn">
-            YES! ❤️
-          </button>
-
-          <button id="talkBtn" class="talk-btn">
-            I'd like to talk ♡
-          </button>
-        </div>
-
-        <p class="small-note">No pressure. Your answer matters.</p>
-      </div>
+      <button class="back-btn" data-back="story">
+        ← Back
+      </button>
 
     </section>
 
-    <!-- Yes response -->
-    <section class="final-screen hidden" id="finalScreen">
-      <div class="big-heart celebration-heart">♥</div>
+
+    <!-- PAGE 4: PROPOSAL -->
+    <section class="page proposal-page" id="proposal">
+
+      <div class="big-heart">♥</div>
+
+      <p class="eyebrow">SO, HERE'S MY QUESTION</p>
+
+      <h1>
+        Khushi, will you be my
+        <span>girlfriend?</span>
+      </h1>
+
+      <p class="proposal-subtitle">
+        I'd really love to start this new chapter with you.
+      </p>
+
+      <div class="buttons">
+
+        <button id="yesBtn" class="yes-btn">
+          YES! ❤️
+        </button>
+
+        <button id="talkBtn" class="talk-btn">
+          I'd like to talk ♡
+        </button>
+
+      </div>
+
+      <p class="small-note">
+        Whatever your answer, your feelings matter.
+      </p>
+
+      <button class="back-btn" data-back="confession">
+        ← Back
+      </button>
+
+    </section>
+
+
+    <!-- PAGE 5: CELEBRATION -->
+    <section class="page final-screen" id="finalScreen">
+
+      <div class="celebration-ring">
+        <div class="celebration-heart">♥</div>
+      </div>
 
       <p class="eyebrow">A NEW CHAPTER BEGINS</p>
 
@@ -158,23 +210,42 @@
       <h2>Khushi & Dikshant</h2>
 
       <p>
-        Here's to more conversations, more memories
-        and many beautiful moments together.
+        Here's to more conversations,
+        more memories and many beautiful
+        moments together.
       </p>
 
-      <div class="final-doodle">♡ ✦ ♥ ✦ ♡</div>
+      <div class="final-doodle">
+        ♡ ✦ ♥ ✦ ♡
+      </div>
+
+      <p class="signature">
+        With love, Dikshant.
+      </p>
+
     </section>
 
-    <!-- Take your time response -->
-    <section class="final-screen hidden" id="talkScreen">
+
+    <!-- PAGE 6: TAKE YOUR TIME -->
+    <section class="page final-screen" id="talkScreen">
+
       <div class="big-heart">♡</div>
+
+      <p class="eyebrow">A LITTLE NOTE</p>
+
       <h1>That's okay, Khushi.</h1>
+
       <p>
         Take your time. Your feelings matter,
         and there's no pressure to answer right away.
       </p>
-      <p class="signature">— Dikshant</p>
+
+      <p class="signature">
+        — Dikshant ❤️
+      </p>
+
     </section>
+
 
     <footer>
       <span>Made with ♥</span>
@@ -184,6 +255,6 @@
   </main>
 
   <script src="script.js"></script>
+
 </body>
-  </html>
-  
+</html>
